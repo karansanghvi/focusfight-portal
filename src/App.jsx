@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./assets/style.css";
 import Sidebar from "./components/Sidebar";
+import Users from "./components/Users";
 
 function App() {
  
@@ -25,43 +26,7 @@ function App() {
         )}
 
         {activeSection === "users" && (
-          <div id="users">
-            <h1>Users</h1>
-            <hr/>
-
-            <div className="btn-container">
-              <button className="primaryBtn" type="submit">Download Sheet</button>
-            </div>
-
-            <table className="user-table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Email Address</th>
-                  <th>Phone Number</th>
-                  <th>Password</th>
-                  <th>Remember Me</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>user@example.com</td>
-                  <td>1234567890</td>
-                  <td>********</td>
-                  <td>
-                    <input type="checkbox" checked readOnly />
-                  </td>
-                  <td>
-                    <button className="action-btn">Edit</button>
-                    <button className="action-btn delete">Delete</button>
-                  </td>
-                </tr>
-                {/* Add more rows dynamically if needed */}
-              </tbody>
-            </table>            
-          </div>
+          <Users/>
         )}
       </main>
      </div>
